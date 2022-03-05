@@ -7,8 +7,8 @@ const {MONGOURI} = require('./keys')
 require('./models/user')
 
 app.use(express.json())
-app.use(require("./routes/saveUser"))
 app.use(cors())
+app.use(require("./routes/saveUser"))
 
 mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
