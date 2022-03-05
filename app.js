@@ -6,9 +6,9 @@ const port = process.env.PORT || 5000
 const {MONGOURI} = require('./keys')
 require('./models/user')
 
-app.use(cors())
 app.use(express.json())
 app.use(require("./routes/saveUser"))
+app.use(cors())
 
 mongoose.connect(MONGOURI,{
     useNewUrlParser:true,
